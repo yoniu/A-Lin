@@ -8,8 +8,8 @@
 		<?php 
 		while($this->next()):
 		?>
-			<?php if(isset($this->fields->show_theme)): ?>
-				<?php if(isset($this->fields->top_img)){ $top_img=$this->fields->top_img; }else{ $top_img = GetThumFromContent($this, $this->options->themeUrl); } ?>
+			<?php if($this->fields->show_theme): ?>
+				<?php if($this->fields->top_img){ $top_img=$this->fields->top_img; }else{ $top_img = GetThumFromContent($this, $this->options->themeUrl); } ?>
 				<?php if($this->fields->show_theme == "1"): // 大图展示 ?>
 					<div class="a-article a-article-bigImg a-m-t-3">
 						<a href="<?php $this->permalink() ?>">
@@ -62,7 +62,7 @@
 					</div>
 				<?php endif ?>
 			<?php else: // 大图展示 ?>
-				<?php if(isset($this->fields->top_img)){ $top_img=$this->fields->top_img; }else{ $top_img = GetThumFromContent($this, $this->options->themeUrl); } ?>
+				<?php if($this->fields->top_img){ $top_img=$this->fields->top_img; }else{ $top_img = GetThumFromContent($this, $this->options->themeUrl); } ?>
 				<div class="a-article a-article-bigImg a-m-t-3">
 					<a href="<?php $this->permalink() ?>">
 						<div style="background-image: url(<?php echo $top_img; ?>)" class="a-article-bigImg-img"></div>
