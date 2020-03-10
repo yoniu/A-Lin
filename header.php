@@ -59,7 +59,7 @@
 		<?php $bigImgUrl = $this->options->bigImgUrl ? $this->options->bigImgUrl : $this->options->themeUrl.'/img/070.jpg';?>
 		<?php if($this->is('index')): ?><div class="a-top-img a-m-t-1" style="background-image: url(<?php echo $bigImgUrl; ?>)"></div><?php endif; ?>
 		<?php if($this->is('single') && $this->fields->show_theme == "1"): ?>
-			<?php if(isset($this->fields->top_img)){ $top_img=$this->fields->top_img; }else{ $top_img = GetThumFromContent($this, $this->options->themeUrl); } ?>
+			<?php if($this->fields->top_img){ $top_img=$this->fields->top_img; }else{ $top_img = GetThumFromContent($this, $this->options->themeUrl); } ?>
 			<div class="a-top-img a-m-t-1" style="background-image: url(<?php echo $top_img; ?>)"></div>
 		<?php endif; ?>
 	</div><!-- end #header -->
