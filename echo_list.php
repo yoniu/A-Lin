@@ -42,9 +42,9 @@
 						<div class="a-article-T-fa"><i class="fa <?php echo $fa_tw; ?>"></i></div>
 					</div>
 				<?php else: // 侧边图if($this->fields->show_theme == "2") ?>
-					<div class="a-article a-article-rightImg a-flex a-flex-j-s a-m-t-3">
+					<div class="a-article a-article-rightImg a-flex a-m-t-3">
 						<div style="background-image: url(<?php echo $top_img; ?>)" class="a-article-rightImg-Img"></div>
-						<div class="a-article-rightImg-left a-flex-1 a-flex-j-s a-m-l-2">
+						<div class="a-article-rightImg-left a-flex-1 a-flex-full a-flex-j-s a-m-l-2">
 							<div>
 								<a class="a-article-rightImg-title" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
 								<div class="a-article-rightImg-des"><?php echo _context_tool($this->content, 80); ?></div>
